@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wack-a-mole</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <h2 id="time-left-header">Time left: <span id="time-left">15</span></h2>
+            <h2 id="score-header">Your score: <span id="score">0</span></h2>
+            <button id="start"> Start </button>
+        </div>
+
+        <div class="push"></div>
+
+        <div class="grid">
+            <div class="square" id="1"></div>
+            <div class="square" id="2"></div>
+            <div class="square" id="3"></div>
+            <div class="square" id="4"></div>
+            <div class="square" id="5"></div>
+            <div class="square" id="6"></div>
+            <div class="square" id="7"></div>
+            <div class="square" id="8"></div>
+            <div class="square" id="9"></div>
+            <div class="square" id="10"></div>
+        </div>
+
+        <div id="popup-result">
+            <span>Time is over!</span>
+            <div id="star-container">
+                <img src="img/star_empty.png" width="60" height="60" id="star1">
+                <img src="img/star_empty.png" width="60" height="60" id="star2">
+                <img src="img/star_empty.png" width="60" height="60" id="star3">
+            </div>
+
+            <h3>Your score:</h3>
+            <img src="img/score_plank2.png" width="186" height="62" id="score_plank">
+            <div id="score2">0</div>
+
+            <button id="btn-play-again">One more time</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
