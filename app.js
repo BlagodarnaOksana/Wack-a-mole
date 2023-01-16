@@ -36,20 +36,23 @@ squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == hitPosition) {
             result++
+            square.classList.add('moleOI')
+            setTimeout(function () { square.classList.remove('moleOI') }, 200)
+
             score.textContent = result
             score2.textContent = result
             hitPosition = null
 
-            if (result == 1) {
+            if (result == 5) {
                 star1.src = star1.src.replace('img/star_empty.png', 'img/star.png');
             }
 
-            if (result > 1 && result < 5) {
+            if (result > 5 && result < 10) {
                 star1.src = star1.src.replace('img/star_empty.png', 'img/star.png');
                 star2.src = star2.src.replace('img/star_empty.png', 'img/star.png');
             }
 
-            if (result >= 5) {
+            if (result >= 10) {
                 star1.src = star1.src.replace('img/star_empty.png', 'img/star.png');
                 star2.src = star2.src.replace('img/star_empty.png', 'img/star.png');
                 star3.src = star3.src.replace('img/star_empty.png', 'img/star.png');
@@ -62,9 +65,9 @@ squares.forEach(square => {
 function moveMole() {
     btnStart.style.visibility = "hidden"
     header.style.height = '120px'
-    divPush.style.height = '320px'
+    divPush.style.height = '120px'
 
-    timerId = setInterval(randomSquare, 500)
+    timerId = setInterval(randomSquare, 700)
     countDownTimerId = setInterval(countDown, 1000)
 }
 
