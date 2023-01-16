@@ -5,10 +5,10 @@ body {
     height: 100%;
 }
 
-.container {
+/*.container {
     min-height: 100%;
     margin-bottom: -340px;
-}
+}*/
 
 #header {
     position: relative;
@@ -58,11 +58,14 @@ span {
     color: #e86912;
 }
 
+/*.push {
+    height: 200px;
+}*/
+
 .grid {
-    position: absolute;
-    top: 550px;
-    left: 200px;
-    width: 80%;
+    position: relative;
+    top: 340px;
+    width: 1200px;
     height: 340px;
     display: flex;
     justify-content: space-around;
@@ -81,6 +84,10 @@ span {
 
 .mole {
     background-image: url('img/krot.png');
+}
+
+.moleOI {
+    background-image: url('img/krot_oi.png');
 }
 
 #popup-result {
@@ -155,4 +162,10 @@ h3 {
     position: relative;
     left: 200px;
     top: 53px;
+}
+
+@media only screen and (max-width: 1600px) {
+    .grid {
+        top: 200px;
+    }
 }
